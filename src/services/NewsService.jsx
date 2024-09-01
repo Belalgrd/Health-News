@@ -1,13 +1,12 @@
 import axios from 'axios';
 
-const API_KEY = '828eaa3c06ba43d086824e26d2e2da66';
-const BASE_URL = 'https://newsapi.org/v2/';
+const API_KEY = '3f83d3e35f49d290d7ee2eb424e42295';
+const BASE_URL = 'https://gnews.io/api/v4/';
 
 export const fetchHealthNews = async (category = 'health') => {
   try {
-    // search categories he yaha pe.
     let query;
-    
+
     if (category === 'All') {
       query = 'health';
     } else if (category === 'Nutrition') {
@@ -18,7 +17,7 @@ export const fetchHealthNews = async (category = 'health') => {
       query = 'mental health OR psychology OR mindfulness OR wellness';
     }
 
-    const response = await axios.get(`${BASE_URL}everything?q=${query}&apiKey=${API_KEY}`);
+    const response = await axios.get(`${BASE_URL}search?q=${query}&token=${API_KEY}`);
     
     return response.data.articles;
   } catch (error) {
