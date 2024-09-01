@@ -1,0 +1,110 @@
+/* Container for bookmarks */
+.bookmarks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px; /* Increased max-width for better layout control */
+    margin: 0 auto; /* Center the bookmarks section */
+    padding: 20px; /* Adequate padding for a spacious feel */
+    background-color: #f1f5f9; /* Light background color for differentiation */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  }
+  
+  /* Styling for each bookmark item */
+  .bookmark-item {
+    background-color: #ffffff;
+    padding: 20px; /* Generous padding for comfortable spacing */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Hover effect for bookmark items */
+  .bookmark-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  }
+  
+  /* Bookmark title styling */
+  .bookmark-item h4 {
+    font-size: 1.4rem;
+    color: #334155; /* Darker text color for readability */
+    margin-bottom: 10px;
+    line-height: 1.4; /* Improved line height */
+  }
+  
+  /* External link inside the bookmark */
+  .bookmark-item a {
+    color: #3b82f6; /* Light blue color for links */
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+  
+  .bookmark-item a:hover {
+    text-decoration: underline;
+    color: #1e3a8a; /* Darker blue on hover */
+  }
+  
+  /* Responsive design adjustments for smaller screens */
+  @media (max-width: 1024px) {
+    .bookmarks {
+      max-width: 90%; /* Allow more flexibility on tablets and larger screens */
+      padding: 15px;
+    }
+  
+    .bookmark-item {
+      padding: 15px;
+    }
+  
+    .bookmark-item h4 {
+      font-size: 1.2rem; /* Smaller font size for titles */
+    }
+  
+    .bookmark-item a {
+      font-size: 0.9rem; /* Smaller font size for links */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .bookmarks {
+      max-width: 100%; /* Full width on smaller screens */
+      padding: 10px; /* Reduced padding for smaller screens */
+    }
+  
+    .bookmark-item {
+      padding: 10px; /* Further reduced padding for smaller screens */
+    }
+  
+    .bookmark-item h4 {
+      font-size: 1.1rem; /* Smaller font size for titles */
+    }
+  
+    .bookmark-item a {
+      font-size: 0.8rem; /* Smaller font size for links */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .bookmarks {
+      padding: 5px; /* Minimal padding for very small screens */
+    }
+  
+    .bookmark-item {
+      padding: 8px; /* Adjusted padding for very small screens */
+    }
+  
+    .bookmark-item h4 {
+      font-size: 1rem; /* Smaller font size for very small screens */
+    }
+  
+    .bookmark-item a {
+      font-size: 0.8rem; /* Consistent small font size for links */
+    }
+  }
+  

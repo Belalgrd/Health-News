@@ -1,0 +1,86 @@
+/* General container for news items */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexibility in column width */
+  gap: 20px; /* Space between grid items */
+  margin: 0 auto; /* Center the grid container */
+  padding: 20px; /* Add padding around the grid */
+  width: 100%; /* Ensure the grid takes the full width */
+  max-width: 1200px; /* Limit maximum width for larger screens */
+}
+
+/* Individual news item styling */
+.news-item {
+  background-color: #ffffff; /* White background for news items */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  overflow: hidden; /* Ensure no content overflows */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.news-item:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.news-item img {
+  width: 100%; /* Full width */
+  height: 180px; /* Fixed height */
+  object-fit: cover; /* Cover the area */
+  border-bottom: 2px solid #eaeaea; /* Divider line */
+}
+
+.news-item h3 {
+  font-size: 1.5rem; /* Slightly larger font size */
+  color: #4c6ef5; /* Accent color */
+  margin: 15px; /* Margin around title */
+}
+
+.news-item p {
+  font-size: 1rem; /* Readable font size */
+  color: #555; /* Text color */
+  margin: 0 15px 15px; /* Margin around text */
+}
+
+.news-item a {
+  display: inline-block;
+  font-size: 1rem;
+  color: #4c6ef5;
+  text-decoration: none;
+  margin: 0 15px 15px; /* Margin around link */
+}
+
+.news-item a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #2a2a72; /* Darker color on hover */
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 1024px) {
+  .news-list {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust for medium screens */
+    gap: 15px; /* Smaller gap for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .news-list {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 10px; /* Smaller gap on small screens */
+    padding: 10px; /* Adjust padding for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .news-item img {
+    height: 150px; /* Adjust image height for very small screens */
+  }
+
+  .news-item h3 {
+    font-size: 1.3rem; /* Smaller font size for titles */
+  }
+
+  .news-item p, .news-item a {
+    font-size: 0.9rem; /* Smaller font size for text and links */
+  }
+}
