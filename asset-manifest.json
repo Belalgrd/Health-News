@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Health-News/static/css/main.dc3562fd.css",
+    "main.js": "/Health-News/static/js/main.7380c50f.js",
+    "static/js/453.e0048db8.chunk.js": "/Health-News/static/js/453.e0048db8.chunk.js",
+    "index.html": "/Health-News/index.html",
+    "main.dc3562fd.css.map": "/Health-News/static/css/main.dc3562fd.css.map",
+    "main.7380c50f.js.map": "/Health-News/static/js/main.7380c50f.js.map",
+    "453.e0048db8.chunk.js.map": "/Health-News/static/js/453.e0048db8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc3562fd.css",
+    "static/js/main.7380c50f.js"
+  ]
+}
