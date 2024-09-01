@@ -11,7 +11,7 @@ const NewsList = ({ news, onBookmark }) => {
       {news.map((article, index) => (
         <div key={index} className="news-item">
           <h3>{article.title}</h3>
-          {article.urlToImage && <img src={article.urlToImage} alt={article.title} />}
+          {article.image && <img src={article.image} alt={article.title} />}
           <p>{article.description}</p>
           <a href={article.url} target="_blank" rel="noopener noreferrer">
             Read More
